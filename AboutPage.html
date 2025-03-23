@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About RideSync</title>
+    <link href="styles.css" rel="stylesheet">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="logo">RideSync</div>
+        <nav>
+          <a href="index.html">Home</a>
+          <a href="trackARide.html">Track a Ride</a>
+          <a href="#" id="loginLink">Login</a>
+          <a href="download.html" class="cta-btn">Download App</a>
+        </nav>
+    </header>
+
+    <!-- Login Pop-up -->
+    <div class="login-popup" id="loginPopup">
+        <div class="login-content">
+            <span class="close-btn" onclick="closeLoginPopup()">×</span>
+            <h2>Login to RideSync</h2>
+            <form id="loginForm" onsubmit="submitLogin(event)">
+                <input type="text" placeholder="Email or Phone" required>
+                <input type="password" placeholder="Password" required>
+                <div class="login-options">
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                    <button type="submit">Continue</button>
+                </div>
+            </form>
+            <p class="signup-link">Not a member? <a href="#">Sign Up Now</a></p>
+        </div>
+    </div>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <h1>About RideSync and Our Team</h1>
+        <div class="content-box">
+            <p>Born from a spark of innovation in 2025, we set out on a mission to rethink the way people travel together. RideSync is a seamless, stylish way to sync up, save time, and ride smarter, by combining the rides and data from all ride sharing apps including Uber, Lyft, and VIA and give you the best possible option.</p>
+            <p>We’re not any app, we’re a movement. If you’re a daily commuter, a weekend explorer, or just someone who despises driving around in circles for parking, RideSync matches you with the perfect co-traveler. Our tech doesn’t only find you a ride; it finds you the fastest, most comfortable, and cheapest ride available.</p>
+            <p>Powered by innovative intelligence, we’re out to make travel sustainable, social, and just plain fun. From reducing carbon footprints to sparking conversations, we’re here to make every trip one for the books.</p>
+            <p>So, why just ride when you can <span class="highlight">RideSync</span>? Join us, and let’s change the journey—one sync at a time.</p>
+            <a class="learn-more-btn" onclick="toggleMoreInfo()">Learn More</a>
+            <div class="more-info" id="moreInfo">
+                <p>Our team is a diverse group of innovators, engineers, and dreamers dedicated to revolutionizing ridesharing. Based in [City], we’re committed to building a platform that not only connects people but also fosters a sense of community and sustainability.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Image Section -->
+    <section class="image-section">
+        <img src="tech_team.jpg" alt="Team Photo">
+        <img src="RideShareLogo.jpg" alt="RideSync Logo">
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2025 RideSync. All rights reserved.</p>
+        <div>
+            <a href="AboutPage.html">About</a> |
+            <a href="#" id="contactLink">Contact</a> |
+            <a href="PrototypeDetailsPage.html">Prototype Info</a> |
+            <a href="MarketingPage.html">Marketing</a> |
+            <a href="UserGuidePage.html">User Guide</a> |
+            <a href="PrivacyPolicy.html">Privacy Policy</a>
+        </div>
+    </footer>
+
+    <!-- Pop-up Modal -->
+    <div class="feedback-popup" id="feedbackPopup">
+      <div class="popup-content">
+          <span class="close-btn" onclick="closePopup()">×</span>
+          <h2>Send Us Your Feedback</h2>
+          <div class="contact-info">
+              <div class="info-box">
+                  <p><strong>Company Name:</strong> RideSync</p>
+                  <p><strong>Headquarters:</strong> Seattle, WA 12345 AVE SE</p>
+                  <p><strong>Email:</strong> support@ridesync.com</p>
+                  <p><strong>Phone:</strong> (123) 456-7890</p>
+                  <p><strong>Website:</strong> www.ridesync.com</p>
+              </div>
+              <div class="info-box">
+                  <p><strong>Customer Support Team</strong></p>
+                  <p><strong>User Assistance:</strong> Chris Pozun - (123) 555-0011 / userhelp@ridesync.com</p>
+                  <p><strong>Emergency Hotline:</strong> (123) 555-0001</p>
+              </div>
+          </div>
+          <form id="feedbackForm" onsubmit="submitFeedback(event)">
+              <textarea placeholder="Your Feedback" required></textarea>
+              <button type="submit">Submit Feedback</button>
+          </form>
+      </div>
+  </div>
+</body>
+</html>

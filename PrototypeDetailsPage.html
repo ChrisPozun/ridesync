@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prototype Information - RideSync</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">RideSync</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="trackARide.html">Track a Ride</a>
+            <a href="#" id="loginLink">Login</a>
+            <a href="download.html" class="cta-btn">Download App</a>
+        </nav>
+    </header>
+
+    <!-- Login Pop-up -->
+    <div class="login-popup" id="loginPopup">
+        <div class="login-content">
+            <span class="close-btn" onclick="closeLoginPopup()">×</span>
+            <h2>Login to RideSync</h2>
+            <form id="loginForm" onsubmit="submitLogin(event)">
+                <input type="text" placeholder="Email or Phone" required>
+                <input type="password" placeholder="Password" required>
+                <div class="login-options">
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                    <button type="submit">Continue</button>
+                </div>
+            </form>
+            <p class="signup-link">Not a member? <a href="#">Sign Up Now</a></p>
+        </div>
+    </div>
+
+    <!-- Prototype Info Section -->
+    <section class="prototype-section">
+        <h1>Prototype Information</h1>
+        <p>RideSync Version 1.0 - March 22, 2025</p>
+
+        <div class="prototype-content">
+            <h2>Introduction</h2>
+            <p>Welcome to the RideSync prototype! Version 1.0 is our initial release, designed to test core ridesharing functionalities and gather user feedback. We aim to provide a seamless, affordable, and eco-friendly ridesharing experience, and your input will help us improve.</p>
+
+            <h2>Capabilities of RideSync v1.0</h2>
+            <p>RideSync v1.0 offers the following features:</p>
+            <ul>
+                <li><strong>Basic Ride Booking:</strong> Users can book rides by entering pickup and dropoff locations through the homepage or app interface.</li>
+                <li><strong>Driver Matching:</strong> The system matches users with nearby drivers based on location data.</li>
+                <li><strong>Real-Time Tracking:</strong> Track your ride in real-time with a basic map interface (currently using placeholder maps).</li>
+                <li><strong>Payment Processing:</strong> Supports mock payment processing for testing purposes (no real transactions are processed).</li>
+                <li><strong>User Profiles:</strong> Users can create basic profiles with name, email, and phone number.</li>
+                <li><strong>Feedback System:</strong> Submit feedback through the pop-up form accessible via the "Contact" link in the footer.</li>
+            </ul>
+
+            <h2>Limitations of RideSync v1.0</h2>
+            <p>As a prototype, RideSync v1.0 has the following limitations:</p>
+            <ul>
+                <li><strong>Limited Driver Network:</strong> Only a small number of test drivers are available, so ride availability is restricted to specific areas.</li>
+                <li><strong>Mock Data:</strong> Location tracking, driver availability, and payment processing use mock data rather than real-time information.</li>
+                <li><strong>No App Store Integration:</strong> The "Download App" button is a placeholder; the app is not yet available on app stores.</li>
+                <li><strong>Basic UI/UX:</strong> The interface is functional but lacks advanced features like ride scheduling, fare estimates, or driver ratings.</li>
+                <li><strong>Limited Scalability:</strong> The prototype is not optimized for large-scale use and may experience performance issues with high traffic.</li>
+                <li><strong>No Backend Integration:</strong> Forms (e.g., feedback, contact) show alerts instead of saving data to a server.</li>
+            </ul>
+
+            <h2>Help Us Improve</h2>
+            <p>We’re excited to hear your feedback! Use the "Contact" link in the footer to share your thoughts on RideSync v1.0. Your input will help shape future versions.</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 RideSync. All rights reserved.</p>
+        <p>
+            <a href="AboutPage.html">About</a> | 
+            <a href="#" id="contactLink">Contact</a> | 
+            <a href="#">Prototype Info</a> | 
+            <a href="MarketingPage.html">Marketing</a> | 
+            <a href="UserGuidePage.html">User Guide</a> | 
+            <a href="PrivacyPolicy.html">Privacy Policy</a>
+        </p>
+    </footer>
+
+    <!-- Pop-up Modal -->
+    <div class="feedback-popup" id="feedbackPopup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">×</span>
+            <h2>Send Us Your Feedback</h2>
+            <div class="contact-info">
+                <div class="info-box">
+                    <p><strong>Company Name:</strong> RideSync</p>
+                    <p><strong>Headquarters:</strong> Seattle, WA 12345 AVE SE</p>
+                    <p><strong>Email:</strong> support@ridesync.com</p>
+                    <p><strong>Phone:</strong> (123) 456-7890</p>
+                    <p><strong>Website:</strong> www.ridesync.com</p>
+                </div>
+                <div class="info-box">
+                    <p><strong>Customer Support Team</strong></p>
+                    <p><strong>User Assistance:</strong> Chris Pozun - (123) 555-0011 / userhelp@ridesync.com</p>
+                    <p><strong>Emergency Hotline:</strong> (123) 555-0001</p>
+                </div>
+            </div>
+            <form id="feedbackForm" onsubmit="submitFeedback(event)">
+                <textarea placeholder="Your Feedback" required></textarea>
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

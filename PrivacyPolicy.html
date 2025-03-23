@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy - RideSync</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">RideSync</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="trackARide.html">Track a Ride</a>
+            <a href="#" id="loginLink">Login</a>
+            <a href="download.html" class="cta-btn">Download App</a>
+        </nav>
+    </header>
+
+    <!-- Login Pop-up -->
+    <div class="login-popup" id="loginPopup">
+        <div class="login-content">
+            <span class="close-btn" onclick="closeLoginPopup()">×</span>
+            <h2>Login to RideSync</h2>
+            <form id="loginForm" onsubmit="submitLogin(event)">
+                <input type="text" placeholder="Email or Phone" required>
+                <input type="password" placeholder="Password" required>
+                <div class="login-options">
+                    <a href="#" class="forgot-password">Forgot Password?</a>
+                    <button type="submit">Continue</button>
+                </div>
+            </form>
+            <p class="signup-link">Not a member? <a href="#">Sign Up Now</a></p>
+        </div>
+    </div>
+
+    <!-- Privacy Policy Section -->
+    <section class="privacy-section">
+        <h1>Privacy Policy</h1>
+        <p>Last Updated: March 22, 2025</p>
+
+        <div class="privacy-content">
+            <h2>Introduction</h2>
+            <p>At RideSync, we are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our ridesharing application and website. By using RideSync, you agree to the terms of this policy.</p>
+
+            <h2>Information We Collect</h2>
+            <p>We may collect the following types of information:</p>
+            <ul>
+                <li><strong>Personal Information:</strong> Name, email address, phone number, and payment information when you register or book a ride.</li>
+                <li><strong>Location Data:</strong> Real-time location data to match you with drivers and track your ride.</li>
+                <li><strong>Usage Data:</strong> Information about how you interact with our app, such as ride history and preferences.</li>
+                <li><strong>Device Information:</strong> Device type, operating system, and IP address for security and analytics purposes.</li>
+            </ul>
+
+            <h2>How We Use Your Information</h2>
+            <p>We use your information to:</p>
+            <ul>
+                <li>Provide and improve our ridesharing services.</li>
+                <li>Match you with drivers and facilitate ride bookings.</li>
+                <li>Process payments and communicate with you about your rides.</li>
+                <li>Analyze usage patterns to enhance user experience.</li>
+                <li>Ensure the safety and security of our platform.</li>
+            </ul>
+
+            <h2>Sharing Your Information</h2>
+            <p>We may share your information with:</p>
+            <ul>
+                <li><strong>Drivers:</strong> To facilitate ride coordination (e.g., sharing your name and location).</li>
+                <li><strong>Third-Party Service Providers:</strong> For payment processing, analytics, and customer support.</li>
+                <li><strong>Legal Authorities:</strong> If required by law or to protect the safety of our users.</li>
+            </ul>
+            <p>We do not sell your personal information to third parties.</p>
+
+            <h2>Data Security</h2>
+            <p>We implement industry-standard security measures to protect your data, including encryption and secure servers. However, no method of transmission over the internet is 100% secure, and we cannot guarantee absolute security.</p>
+
+            <h2>Your Rights</h2>
+            <p>You have the right to:</p>
+            <ul>
+                <li>Access, update, or delete your personal information.</li>
+                <li>Opt out of marketing communications.</li>
+                <li>Disable location tracking (though this may limit app functionality).</li>
+            </ul>
+            <p>To exercise these rights, please contact us at <a href="mailto:support@ridesync.com">support@ridesync.com</a>.</p>
+
+            <h2>Changes to This Policy</h2>
+            <p>We may update this Privacy Policy from time to time. We will notify you of significant changes by posting a notice on our website or app. Your continued use of RideSync after such changes constitutes your acceptance of the updated policy.</p>
+
+            <h2>Contact Us</h2>
+            <p>If you have any questions about this Privacy Policy, please contact us:</p>
+            <p><strong>Email:</strong> support@ridesync.com</p>
+            <p><strong>Phone:</strong> (123) 456-7890</p>
+            <p><strong>Address:</strong> RideSync, Seattle, WA 12345 AVE SE</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 RideSync. All rights reserved.</p>
+        <p>
+            <a href="AboutPage.html">About</a> | 
+            <a href="#" id="contactLink">Contact</a> | 
+            <a href="PrototypeDetailsPage.html">Prototype Info</a> | 
+            <a href="MarketingPage.html">Marketing</a> | 
+            <a href="UserGuidePage.html">User Guide</a> | 
+            <a href="#">Privacy Policy</a>
+        </p>
+    </footer>
+
+    <!-- Pop-up Modal -->
+    <div class="feedback-popup" id="feedbackPopup">
+        <div class="popup-content">
+            <span class="close-btn" onclick="closePopup()">×</span>
+            <h2>Send Us Your Feedback</h2>
+            <div class="contact-info">
+                <div class="info-box">
+                    <p><strong>Company Name:</strong> RideSync</p>
+                    <p><strong>Headquarters:</strong> Seattle, WA 12345 AVE SE</p>
+                    <p><strong>Email:</strong> support@ridesync.com</p>
+                    <p><strong>Phone:</strong> (123) 456-7890</p>
+                    <p><strong>Website:</strong> www.ridesync.com</p>
+                </div>
+                <div class="info-box">
+                    <p><strong>Customer Support Team</strong></p>
+                    <p><strong>User Assistance:</strong> Chris Pozun - (123) 555-0011 / userhelp@ridesync.com</p>
+                    <p><strong>Emergency Hotline:</strong> (123) 555-0001</p>
+                </div>
+            </div>
+            <form id="feedbackForm" onsubmit="submitFeedback(event)">
+                <textarea placeholder="Your Feedback" required></textarea>
+                <button type="submit">Submit Feedback</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Track a Ride - RideSync</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+    <script src="https://unpkg.com/maplibre-gl/dist/maplibre-gl.js"></script>
+    <link href="https://unpkg.com/maplibre-gl/dist/maplibre-gl.css" rel="stylesheet" />
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">RideSync</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="trackARide.html">Track a Ride</a>
+            <a href="#" id="loginLink">Login</a>
+            <a href="download.html" class="cta-btn">Download App</a>
+        </nav>
+    </header>
+    
+    <!-- Map -->
+    <div id="map" style="width: 100%; height: 500px"></div>
+
+    <!-- Track a Ride Section -->
+    <section class="track-section">
+      <div class="map-container">
+          <div id="map"></div>
+      </div>
+      <div class="ride-actions">
+          <button class="action-btn">Contact Nearest Driver</button>
+          <button class="action-btn">Share Nearest Ride</button>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 RideSync. All rights reserved.</p>
+        <p>
+            <a href="AboutPage.html">About</a> | 
+            <a href="#" id="contactLink">Contact</a> | 
+            <a href="PrototypeDetailsPage.html">Prototype Info</a> | 
+            <a href="MarketingPage.html">Marketing</a> | 
+            <a href="UserGuidePage.html">User Guide</a> | 
+            <a href="PrivacyPolicy.html">Privacy Policy</a>
+        </p>
+    </footer>
+
+    <!-- Pop-up Modal -->
+    <div class="feedback-popup" id="feedbackPopup">
+      <div class="popup-content">
+          <span class="close-btn" onclick="closePopup()">×</span>
+          <h2>Send Us Your Feedback</h2>
+          <div class="contact-info">
+              <div class="info-box">
+                  <p><strong>Company Name:</strong> RideSync</p>
+                  <p><strong>Headquarters:</strong> Seattle, WA 12345 AVE SE</p>
+                  <p><strong>Email:</strong> support@ridesync.com</p>
+                  <p><strong>Phone:</strong> (123) 456-7890</p>
+                  <p><strong>Website:</strong> www.ridesync.com</p>
+              </div>
+              <div class="info-box">
+                  <p><strong>Customer Support Team</strong></p>
+                  <p><strong>User Assistance:</strong> Chris Pozun - (123) 555-0011 / userhelp@ridesync.com</p>
+                  <p><strong>Emergency Hotline:</strong> (123) 555-0001</p>
+              </div>
+          </div>
+          <form id="feedbackForm" onsubmit="submitFeedback(event)">
+              <textarea placeholder="Your Feedback" required></textarea>
+              <button type="submit">Submit Feedback</button>
+          </form>
+      </div>
+  </div>
+
+  <!-- Login Pop-up -->
+  <div class="login-popup" id="loginPopup">
+      <div class="login-content">
+          <span class="close-btn" onclick="closeLoginPopup()">×</span>
+          <h2>Login to RideSync</h2>
+          <form id="loginForm" onsubmit="submitLogin(event)">
+              <input type="text" placeholder="Email or Phone" required>
+              <input type="password" placeholder="Password" required>
+              <div class="login-options">
+                  <a href="#" class="forgot-password">Forgot Password?</a>
+                  <button type="submit">Continue</button>
+              </div>
+          </form>
+          <p class="signup-link">Not a member? <a href="#">Sign Up Now</a></p>
+      </div>
+  </div>
+</body>
+</html>

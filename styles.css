@@ -1,0 +1,661 @@
+/* ==========================================================================
+   Base Styles
+   ========================================================================== */
+   * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  body {
+    background-color: #FFFFFF; /* Consolidated from multiple definitions, using the most common value */
+  }
+  
+  /* ==========================================================================
+     Typography
+     ========================================================================== */
+  h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+    color: #333333;
+  }
+
+  h1 .white {
+    color: #f3efef;
+  }
+  
+  p, .white {
+    color: #f3efef;
+  }
+
+  h2 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #333333;
+  }
+  
+  h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #333333;
+  }
+  
+  p {
+    font-size: 16px;
+    color: #666666;
+    line-height: 1.6;
+  }
+  
+  /* ==========================================================================
+     Links and Buttons
+     ========================================================================== */
+  a {
+    text-decoration: none;
+  }
+  
+  .cta-btn,
+  .action-btn,
+  .download-btn,
+  .learn-more-btn,
+  .popup-content button,
+  .login-content button,
+  .search-form button {
+    display: inline-block;
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    background-color: #2EC4B6; /* Restored original teal color from header and hero buttons */
+    color: #FFFFFF;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  
+  .cta-btn:hover,
+  .action-btn:hover,
+  .download-btn:hover,
+  .learn-more-btn:hover,
+  .popup-content button:hover,
+  .login-content button:hover,
+  .search-form button:hover {
+    background-color: #00A89A; /* Kept the hover color as it was consistent */
+  }
+  
+  .android-btn {
+    background-color: #3DDC84; /* Android green */
+  }
+  
+  .android-btn:hover {
+    background-color: #35C475;
+  }
+  
+  .ios-btn {
+    background-color: #000000; /* iOS black */
+  }
+  
+  .ios-btn:hover {
+    background-color: #333333;
+  }
+  
+  /* ==========================================================================
+     Header
+     ========================================================================== */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px; /* Using the more common padding value */
+    background-color: #FFFFFF;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: 600;
+    color: #2EC4B6; /* Restored original teal color from header */
+  }
+  
+  nav a {
+    margin-left: 20px;
+    text-decoration: none;
+    font-size: 16px;
+    color: #333333;
+  }
+  
+  nav .cta-btn {
+    padding: 8px 15px; /* Specific padding for nav CTA button */
+  }
+  
+  /* ==========================================================================
+     Hero Section
+     ========================================================================== */
+  .hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://images.unsplash.com/photo-1449960238630-7e720e630019?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+  }
+  
+  .hero h1 {
+    font-size: 48px; /* Larger font size for hero h1 */
+  }
+  
+  .hero p {
+    font-size: 20px; /* Larger font size for hero p */
+    margin-bottom: 20px;
+  }
+  
+  .search-form {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    gap: 10px;
+  }
+  
+  .search-form input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #CCC;
+    font-size: 16px;
+    width: 200px;
+  }
+  
+  /* ==========================================================================
+     Features Section
+     ========================================================================== */
+  .features {
+    padding: 50px 30px;
+    text-align: center;
+    background-color: #F9F9F9;
+  }
+  
+  .features h2 {
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+  
+  /* ==========================================================================
+     Benefits Section
+     ========================================================================== */
+  .benefits {
+    padding: 50px 30px;
+    text-align: center;
+    background-color: #F9F9F9;
+  }
+  
+  .benefits h2 {
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+  
+  /* ==========================================================================
+     Testimonials Section
+     ========================================================================== */
+  .testimonials {
+    padding: 50px 30px;
+    text-align: center;
+    background-color: #F9F9F9;
+  }
+  
+  .testimonials h2 {
+    font-size: 30px;
+    margin-bottom: 40px;
+  }
+  
+  .testimonial-box .author {
+    font-size: 14px;
+    color: #00C4B4; /* Restored original color for testimonial author */
+    font-style: italic;
+  }
+  
+  /* ==========================================================================
+     CTA Section
+     ========================================================================== */
+  .cta-section {
+    padding: 50px 30px;
+    text-align: center;
+    background-color: #FFFFFF;
+  }
+  
+  /* ==========================================================================
+     About Section
+     ========================================================================== */
+  .about-section {
+    padding: 50px 30px;
+    text-align: center;
+  }
+  
+  .about-section h1 {
+    font-size: 30px;
+    margin-bottom: 20px;
+  }
+  
+  .content-box {
+    background-color: #333333;
+    color: #FFFFFF;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 0 auto;
+    max-width: 1000px;
+    text-align: left;
+    font-size: 16px;
+  }
+  
+  .content-box p {
+    margin-bottom: 20px;
+  }
+  
+  .content-box .highlight {
+    color: #00C4B4; /* Restored original color for highlight */
+    font-weight: 700;
+  }
+  
+  .more-info {
+    display: none;
+    margin-top: 20px;
+    background-color: #444444;
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  /* ==========================================================================
+     Image Section
+     ========================================================================== */
+  .image-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    padding: 30px;
+  }
+  
+  .image-section img {
+    max-width: 400px;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  /* ==========================================================================
+     User Guide Section
+     ========================================================================== */
+  .user-guide-section {
+    padding: 50px 30px;
+    text-align: center;
+  }
+  
+  .user-guide-section p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #000000;
+  }
+  
+  /* ==========================================================================
+     Prototype Info Section
+     ========================================================================== */
+  .prototype-section {
+    padding: 50px 30px;
+    text-align: center;
+  }
+  
+  .prototype-section p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #000000;
+  }
+  
+  .prototype-content ul {
+    list-style-type: disc;
+  }
+  
+  /* ==========================================================================
+     Privacy Policy Section
+     ========================================================================== */
+  .privacy-section {
+    padding: 50px 30px;
+    text-align: center;
+  }
+  
+  .privacy-section > p {
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+  
+  .privacy-content ul {
+    list-style-type: disc;
+  }
+  
+  /* ==========================================================================
+     Track a Ride Section
+     ========================================================================== */
+  .track-section {
+    padding: 20px;
+    text-align: center;
+  }
+  
+  .map-container {
+    max-width: 1200px;
+    margin: 0 auto 20px;
+  }
+  
+  .map-container img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .ride-actions {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
+  
+  /* ==========================================================================
+     Download App Section
+     ========================================================================== */
+  .download-section {
+    padding: 50px 30px;
+    text-align: center;
+  }
+  
+  .download-section p {
+    font-size: 18px;
+    margin-bottom: 40px;
+    color: #000000;
+  }
+  
+  .download-content {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+  }
+  
+  .download-box {
+    background-color: #F9F9F9;
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .download-box p {
+    margin-bottom: 20px;
+  }
+  
+  .mock-link {
+    font-size: 14px;
+  }
+  
+  /* ==========================================================================
+     Content Boxes (Shared Styles)
+     ========================================================================== */
+  .feature-grid,
+  .benefit-grid,
+  .testimonial-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .feature-box,
+  .benefit-box,
+  .testimonial-box {
+    background-color: #FFFFFF;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .guide-content,
+  .prototype-content,
+  .privacy-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: left;
+    background-color: #F9F9F9;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .guide-content ol,
+  .prototype-content ul,
+  .privacy-content ul {
+    margin-left: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .guide-content ol li,
+  .prototype-content ul li,
+  .privacy-content ul li {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  
+  .guide-content a,
+  .prototype-content a,
+  .privacy-content a,
+  .mock-link a {
+    color: #00C4B4; /* Restored original color for links */
+  }
+  
+  .guide-content a:hover,
+  .prototype-content a:hover,
+  .privacy-content a:hover,
+  .mock-link a:hover {
+    text-decoration: underline;
+  }
+  
+  /* ==========================================================================
+     Feedback Pop-up
+     ========================================================================== */
+  .feedback-popup {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #333333;
+    color: #FFFFFF;
+    padding: 20px;
+    z-index: 1000;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease-in-out;
+    transform: translateY(100%);
+  }
+  
+  .feedback-popup.show {
+    display: block;
+    transform: translateY(0);
+  }
+  
+  .popup-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    position: relative;
+  }
+  
+  .popup-content h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .contact-info {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  
+  .info-box {
+    background-color: #444444;
+    padding: 15px;
+    border-radius: 5px;
+    width: 48%;
+    border: 1px solid #FFFFFF;
+  }
+  
+  .info-box p {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  
+  .info-box p strong {
+    color: #00C4B4; /* Restored original color for strong text */
+  }
+  
+  .popup-content form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .popup-content textarea {
+    width: 100%;
+    max-width: 600px;
+    height: 100px;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    resize: none;
+  }
+  
+  /* ==========================================================================
+     Login Pop-up
+     ========================================================================== */
+  .login-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1100;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .login-popup.show {
+    display: flex;
+  }
+  
+  .login-content {
+    background-color: #FFFFFF;
+    padding: 30px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  }
+  
+  .login-content h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .login-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+  }
+  
+  .login-content input {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #E0E0E0;
+    font-size: 16px;
+    width: 100%;
+  }
+  
+  .login-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+  }
+  
+  .forgot-password {
+    font-size: 14px;
+    color: #00C4B4; /* Restored original color */
+  }
+  
+  .forgot-password:hover {
+    text-decoration: underline;
+  }
+  
+  .signup-link {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 14px;
+    color: #000000;
+  }
+  
+  .signup-link a {
+    color: #00C4B4; /* Restored original color */
+  }
+  
+  .signup-link a:hover {
+    text-decoration: underline;
+  }
+  
+  /* ==========================================================================
+     Pop-up Shared Styles
+     ========================================================================== */
+  .close-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  .feedback-popup .close-btn {
+    color: #FFFFFF;
+  }
+  
+  .login-content .close-btn {
+    color: #666666;
+  }
+  
+  #contactLink.active,
+  #loginLink.active {
+    color: #00C4B4; /* Restored original color */
+  }
+  
+  /* ==========================================================================
+     Footer
+     ========================================================================== */
+  footer {
+    background-color: #333333;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 20px;
+  }
+  
+  footer p {
+    margin-bottom: 10px;
+  }
+  
+  footer a {
+    color: #2EC4B6; /* Restored original color from first footer definition */
+    margin: 0 10px;
+  }
+  
+  footer a:hover {
+    text-decoration: underline;
+  }
